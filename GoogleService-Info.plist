@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>194548693096-migtoeqsbphc8k891l4nnf6035mehqs1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.194548693096-migtoeqsbphc8k891l4nnf6035mehqs1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCmgZZpf9z0rWsxT2c07tv8BX16zcNWjPs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>194548693096</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.grouchybartender.Section4-8ChatApp</string>
+	<key>PROJECT_ID</key>
+	<string>chatmaster-51be0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatmaster-51be0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:194548693096:ios:790370d56e1d4806</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatmaster-51be0.firebaseio.com</string>
+</dict>
+</plist>
