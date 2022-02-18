@@ -7,3 +7,10 @@
 */
 
 "chatButton" = "Parles!";
+"logOutButton" = "Déconnectez-vous";
+"titleOfAllUsersVC" = "Sélectionnez des amis";
+"emailAlreadyInUse" = "Cette adresse email est déjà utilisée";
+"invalidEmail" = "S'il vous plaît, mettez une adresse email valide";
+"wrongPassword" = "Le mot de passe est incorrect";
+"emailNotFound" = "Adresse e-mail incorrecte";
+"emptyField" = "Entrez un nom, un e-mail et un mot de passe";

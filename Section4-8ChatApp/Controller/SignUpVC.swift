@@ -32,15 +32,19 @@ class SignUpVC: UIViewController {
         email.count > 0,
         password.count > 0
             else {
-                //ERROR SERVICE
-                print("error")
+                self.present(AlertService.shared.getEnumAlert(type: .emptyField), animated: true, completion: nil)
                 return
         }
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                //ERROR SERVICE
-                print("error")
+                if error._code == AuthErrorCode.invalidEmail.rawValue {
+                    self.present(AlertService.shared.getEnumAlert(type: .invalidEmail), animated: true, completion: nil)
+                } else if error._code == AuthErrorCode.emailAlreadyInUse.rawValue {
+                    self.present(AlertService.shared.getEnumAlert(type: .emailAlreadyInUse), animated: true, completion: nil)
+                } else {
+                    self.present(AlertService.shared.getLocalizedAlert(error: error), animated: true, completion: nil)
+                }
                 return
             }
             if let user = result?.user {

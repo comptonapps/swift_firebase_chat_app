@@ -52,15 +52,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw9-O5-e7g">
+                                <rect key="frame" x="87" y="144" width="201" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="QW0-4v-kkQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ymh-4h-q9K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E5b-GO-lGq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MT2-f3-TLX"/>
                             <constraint firstItem="E5b-GO-lGq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V5U-dk-vwC"/>
+                            <constraint firstItem="vw9-O5-e7g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XjK-Jd-xaY"/>
+                            <constraint firstItem="vw9-O5-e7g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="kun-zx-xXr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="epz-9Y-qDd"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="vw9-O5-e7g" id="Tju-MS-nZU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,7 +398,7 @@
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-rX-6ik">
-                                        <rect key="frame" x="8" y="10" width="315" height="30"/>
+                                        <rect key="frame" x="8" y="10" width="306" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="a1o-Yu-i5x"/>
                                         </constraints>
@@ -392,10 +407,10 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nax-WQ-nnQ">
-                                        <rect key="frame" x="331" y="10" width="36" height="30"/>
+                                        <rect key="frame" x="322" y="10" width="45" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="map-vl-JUV"/>
-                                            <constraint firstAttribute="width" constant="36" id="t8v-zM-xk6"/>
+                                            <constraint firstAttribute="width" constant="45" id="t8v-zM-xk6"/>
                                         </constraints>
                                         <state key="normal" title="Send"/>
                                         <connections>

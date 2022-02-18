@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Flurry_iOS_SDK
 
 class AllUsersVC: UIViewController {
     
@@ -20,9 +21,11 @@ class AllUsersVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Select Chat Users"
+        let localizedTitle = NSLocalizedString("titleOfAllUsersVC", comment: "The title for AllUsersVC")
+        title = localizedTitle
         ref = Database.database().reference()
-        let barButton = UIBarButtonItem(title: "Chat!", style: .plain, target: self, action: #selector(chatTapped))
+        let buttonTitle = NSLocalizedString("chatButton", comment: "Title for the start chat button")
+        let barButton = UIBarButtonItem(title: buttonTitle, style: .plain, target: self, action: #selector(chatTapped))
         navigationItem.rightBarButtonItem = barButton
         tableView.delegate = self
         tableView.dataSource = self
@@ -31,15 +34,16 @@ class AllUsersVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("vwa \(selectedUserArray)")
+        //Clear array for snapshot fetch
         allUsers.removeAll()
-        //selectedUserArray.removeAll()
         handle = ref.child("users").observe(.childAdded, with: { (snapshot) in
             if let value = snapshot.value as? [String: AnyObject] {
                 let name = value["name"] as! String
                 let email = value["email"] as! String
                 let id = snapshot.key
                 var isSelected = false
+                
+                //check to see which users had been selected for chat so they remain selected.
                 if self.selectedUserArray.contains(id){
                     isSelected = true
                 }
@@ -58,10 +62,11 @@ class AllUsersVC: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        ref.removeAllObservers()
+        ref.removeObserver(withHandle: handle)
     }
     
     @objc func chatTapped() {
+        Flurry.logEvent("chatChecked")//Log event to track how many times the chats are checked
         self.performSegue(withIdentifier: "segue", sender: nil)
     }
     
@@ -95,7 +100,7 @@ extension AllUsersVC : UITableViewDataSource {
 
 extension AllUsersVC : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // Check or uncheck tableViewCell upon selection of user
         var index = 0
         let user = allUsers[indexPath.row]
         user.selected = !user.selected
@@ -110,7 +115,6 @@ extension AllUsersVC : UITableViewDelegate {
                 index += 1
             }
         }
-        print(selectedUserArray)
         tableView.reloadRows(at: [indexPath], with: .fade)
     }
 }

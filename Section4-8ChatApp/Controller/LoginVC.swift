@@ -34,8 +34,14 @@ class LoginVC: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                //ERROR SERVICE
-                print("error")
+                if error._code == AuthErrorCode.userNotFound.rawValue {
+                    self.present(AlertService.shared.getEnumAlert(type: .emailNotFound), animated: true, completion: nil)
+                } else if error._code == AuthErrorCode.wrongPassword.rawValue {
+                    self.present(AlertService.shared.getEnumAlert(type: .wrongPassword), animated: true, completion: nil)
+                } else {
+                    self.present(AlertService.shared.getLocalizedAlert(error: error), animated: true, completion: nil)
+                }
+                
                 return
             }
             if let user = result?.user {

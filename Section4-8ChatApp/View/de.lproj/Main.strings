@@ -1,12 +1,12 @@
 
 /* Class = "UIButton"; normalTitle = "Log In!"; ObjectID = "6M7-8j-N4f"; */
-"6M7-8j-N4f.normalTitle" = "Log In!";
+"6M7-8j-N4f.normalTitle" = "Melde dich in!";
 
 /* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "B9N-BS-qA0"; */
-"B9N-BS-qA0.normalTitle" = "Sign Up";
+"B9N-BS-qA0.normalTitle" = "Melden Sie sich";
 
 /* Class = "UILabel"; text = "email@something.com"; ObjectID = "ExZ-H6-9Sn"; */
-"ExZ-H6-9Sn.text" = "email@something.com";
+"ExZ-H6-9Sn.text" = "email@anbieter.com";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "Pe3-nF-ENr"; */
 "Pe3-nF-ENr.text" = "Label";
@@ -21,25 +21,25 @@
 "UiR-37-sMT.text" = "Title";
 
 /* Class = "UITextField"; placeholder = "Enter Email"; ObjectID = "d9Z-Kh-gdB"; */
-"d9Z-Kh-gdB.placeholder" = "Enter Email";
+"d9Z-Kh-gdB.placeholder" = "Email";
 
 /* Class = "UITextField"; placeholder = "Enter Username"; ObjectID = "kUM-HB-NjL"; */
-"kUM-HB-NjL.placeholder" = "Enter Username";
+"kUM-HB-NjL.placeholder" = "Nutzername";
 
 /* Class = "UIButton"; normalTitle = "Send"; ObjectID = "nax-WQ-nnQ"; */
-"nax-WQ-nnQ.normalTitle" = "Send";
+"nax-WQ-nnQ.normalTitle" = "Sende";
 
 /* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "qie-PW-9Xu"; */
-"qie-PW-9Xu.normalTitle" = "Log In";
+"qie-PW-9Xu.normalTitle" = "Melde dich in";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "smz-zu-kvJ"; */
 "smz-zu-kvJ.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "vxe-M4-Xf4"; */
-"vxe-M4-Xf4.placeholder" = "Enter Password";
+"vxe-M4-Xf4.placeholder" = "Passwort eingeben";
 
 /* Class = "UIButton"; normalTitle = "Sign Up!"; ObjectID = "zNL-fB-dxr"; */
-"zNL-fB-dxr.normalTitle" = "Sign Up!";
+"zNL-fB-dxr.normalTitle" = "Melden Sie sich!";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "zS3-sf-hvf"; */
-"zS3-sf-hvf.placeholder" = "Password";
+"zS3-sf-hvf.placeholder" = "Passwort";

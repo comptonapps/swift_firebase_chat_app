@@ -7,3 +7,10 @@
 */
 
 "chatButton" = "Chat!";
+"logOutButton" = "Log Out";
+"titleOfAllUsersVC" = "Select Chat Users";
+"emailAlreadyInUse" = "This Email Address has been taken";
+"invalidEmail" = "Please enter a valid email address";
+"wrongPassword" = "Password is incorrect";
+"emailNotFound" = "Incorrect email address";
+"emptyField" = "Enter a name, an email, and a password";

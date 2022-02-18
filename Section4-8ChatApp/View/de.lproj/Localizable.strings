@@ -5,3 +5,12 @@
   Created by Jonathan Compton on 7/17/18.
   Copyright © 2018 Jonathan Compton. All rights reserved.
 */
+
+"chatButton" = "Chatte!";
+"logOutButton" = "Ausloggen";
+"titleOfAllUsersVC" = "Wähle deine Freunde";
+"emailAlreadyInUse" = "Diese E-Mail-Adresse wird bereits verwendet";
+"invalidEmail" = "Bitte geben Sie eine gültige E-Mail-Adresse ein";
+"wrongPassword" = "Das Passwort ist inkorrekt";
+"emailNotFound" = "Falsche E-Mail Adresse";
+"emptyField" = "Geben Sie einen Namen, eine E-Mail-Adresse und ein Passwort ein";

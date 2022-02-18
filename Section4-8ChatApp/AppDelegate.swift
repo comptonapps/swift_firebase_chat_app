@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Flurry_iOS_SDK 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
+        Flurry.startSession("RNFMQVSHFVD5XFQSB9NT", with: FlurrySessionBuilder
+            .init()
+            .withCrashReporting(true)
+            .withLogLevel(FlurryLogLevelAll))
+        
+    
         return true
     }
 
