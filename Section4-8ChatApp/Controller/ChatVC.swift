@@ -53,6 +53,8 @@ class ChatVC: UIViewController, UITextFieldDelegate {
                 
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                 }
                 
             }
@@ -78,12 +80,18 @@ class ChatVC: UIViewController, UITextFieldDelegate {
     }
     @IBAction func sendTapped(_ sender: Any) {
         messageTextField.resignFirstResponder()
+        
+        
         guard let text = messageTextField.text, let id = AuthenticationManager.sharedInstance.userId,
             let name = AuthenticationManager.sharedInstance.userName, text.count > 0 else {return}
         
         let message = ["senderID" : id, "time" : NSTimeIntervalSince1970, "body" : text, "senderName" : name] as [String : Any]
         
         ref.child("chats").childByAutoId().setValue(message)
+        
+       
+        messageTextField.text = ""
+         
     }
 }
 
@@ -93,11 +101,21 @@ extension ChatVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
         let message = messages[indexPath.row]
-        cell.textLabel?.text = message.body
-        cell.detailTextLabel?.text = message.senderName
-        return cell
+        let id = AuthenticationManager.sharedInstance.userId!
+        if id == message.senderID {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
+            cell.bodyLabel.text = message.body
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendCell
+            
+            cell.bodyLabel.text = message.body
+            cell.nameLabel.text = message.senderName
+            //cell.detailTextLabel?.text = message.senderName
+            return cell
+        }
+       
     }
 }
 
